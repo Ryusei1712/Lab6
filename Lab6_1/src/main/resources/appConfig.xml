@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="product1" class="org.example.Product">
+        <property name="id" value="1"/>
+        <property name="name" value="Product A"/>
+        <property name="price" value="10.0"/>
+        <property name="description" value="Description for Product A"/>
+    </bean>
+    <bean id="product2" class="org.example.Product">
+        <constructor-arg name="id" value="2"/>
+        <constructor-arg name="name" value="Product B"/>
+        <constructor-arg name="price" value="20.0"/>
+        <constructor-arg name="description" value="Description for Product B"/>
+    </bean>
+    <bean id="product3" class="org.example.Product" scope="singleton">
+        <property name="id" value="3"/>
+        <property name="name" value="Product C"/>
+        <property name="price" value="30.0"/>
+        <property name="description" value="Description for Product C"/>
+    </bean>
+</beans>
